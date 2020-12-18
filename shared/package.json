@@ -1,0 +1,27 @@
+{
+  "name": "@sejutacita/shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "del-cli ./build/*",
+    "build" : "npm run clean && tsc"
+  },
+  "devDependencies": {
+    "del-cli": "^3.0.1",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.7",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "node-nats-streaming": "^0.3.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
