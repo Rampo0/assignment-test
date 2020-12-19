@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: users-depl
+    name: auth-depl
 spec:
     replicas: 1
     selector:
         matchLabels:
-            app: users
+            app: auth
     template:
         metadata:
             labels:
-                app: users
+                app: auth
         spec:
             containers:
-                - name : users
-                  image: rampooco/sejutacita-users
+                - name : auth
+                  image: rampooco/sejutacita-auth
                   env :
                     - name : MONGO_URI
                       value : 'mongodb://users-mongo-clusterip:27017/users'
@@ -34,12 +34,12 @@ spec:
 apiVersion : v1
 kind : Service
 metadata : 
-    name : users-clusterip-service
+    name : auth-clusterip-service
 spec: 
     selector:
-        app: users
+        app: auth
     ports:
-        - name : users
+        - name : auth
           protocol : TCP
           port: 3000
           targetPort: 3000

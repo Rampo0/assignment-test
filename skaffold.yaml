@@ -9,6 +9,14 @@ build :
       push : false
     artifacts :
         - image : rampooco/sejutacita-users
+          context : users
+          docker :
+            dockerfile : Dockerfile
+          sync :
+            manual :
+                - src : 'src/**/*.ts'
+                  dest : .
+        - image : rampooco/sejutacita-auth
           context : auth
           docker :
             dockerfile : Dockerfile
