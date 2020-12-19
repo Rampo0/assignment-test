@@ -7,3 +7,6 @@ export * from './errors/request-validation-error';
 
 export * from './middlewares/error-handlers';
 export * from './middlewares/validate-request';
+export * from './middlewares/require-auth';
+export * from './middlewares/current-user';
+export * from './middlewares/admin';
