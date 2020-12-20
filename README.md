@@ -12,3 +12,7 @@ host : ec2-3-238-237-81.compute-1.amazonaws.com
 
 
 ![alt text](https://github.com/Rampo0/assignment-test/blob/master/image/Keseluruhan%20Arisitektur.png)
+
+![alt text](https://github.com/Rampo0/assignment-test/blob/master/image/CRUD%20Flow.png)
+
+![alt text](https://github.com/Rampo0/assignment-test/blob/master/image/Auth%20Login%20Flow.png)
