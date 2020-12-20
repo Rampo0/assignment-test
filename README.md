@@ -10,9 +10,14 @@ link : [sejutacita api docs](https://documenter.getpostman.com/view/11962530/TVs
 **Host** <br>
 host : ec2-3-238-237-81.compute-1.amazonaws.com
 
+# Arsitektur
 
 ![alt text](https://github.com/Rampo0/assignment-test/blob/master/image/Keseluruhan%20Arisitektur.png)
 
+# CRUD User Flow
+
 ![alt text](https://github.com/Rampo0/assignment-test/blob/master/image/CRUD%20Flow.png)
+
+# Login Flow
 
 ![alt text](https://github.com/Rampo0/assignment-test/blob/master/image/Auth%20Login%20Flow.png)
