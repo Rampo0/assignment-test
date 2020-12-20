@@ -7,7 +7,7 @@ metadata :
         nginx.ingress.kubernetes.io/use-regex : 'true'
 spec :
     rules :
-        - host : localhost
+        - host : ec2-3-238-237-81.compute-1.amazonaws.com
           http :
             paths :
                 - path : /api/v1/users/?(.*)
