@@ -1,6 +1,6 @@
 # Info
 **Admin credentials**
-email / username	: admin@sejutacita.id
+email / username	: admin@sejutacita.id <br>
 password			: password
 
 **Postman link**
