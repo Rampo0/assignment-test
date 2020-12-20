@@ -5,6 +5,7 @@ password			: password
 
 **Postman link** <br>
 Gunakan production environment pada postman docs <br>
+Gunakan http bukan https <br>
 link : [sejutacita api docs](https://documenter.getpostman.com/view/11962530/TVsskUi6)
 
 **Host** <br>
