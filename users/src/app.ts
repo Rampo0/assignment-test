@@ -6,6 +6,7 @@ import { deleteUsersRoute } from "./routes/delete";
 import { updateUsersRoute } from "./routes/update";
 import { json } from "body-parser";
 import { errorHandler, currentUser } from "@sejutacita/shared"
+import { NotFoundError } from "@sejutacita/shared";
 
 const app = express();
 
@@ -17,6 +18,10 @@ app.use(createUsersRoute);
 app.use(indexUsersRoute);
 app.use(deleteUsersRoute);
 app.use(updateUsersRoute);
+
+app.all('*', async (req , res) => { 
+    throw new NotFoundError(); 
+});
 
 // middlewares
 app.use(errorHandler);
