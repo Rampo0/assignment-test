@@ -9,7 +9,9 @@ Gunakan http bukan https <br>
 link : [sejutacita api docs](https://documenter.getpostman.com/view/11962530/TVsskUi6)
 
 **Host** <br>
-host : ec2-3-238-237-81.compute-1.amazonaws.com
+host : ec2-3-238-237-81.compute-1.amazonaws.com <br>
+
+***Note: Deployment sudah dimatikan**
 
 # Arsitektur
 
