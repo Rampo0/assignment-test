@@ -117,25 +117,17 @@ Allow the process to complete.
 kubeadm version
 3. Repeat for each server node.
 
-
-
 Note: Make sure you install the same version of each package on each machine. Different versions can create instability. Also, this process prevents apt from automatically updating Kubernetes. For update instructions, please see the developers’ instructions.
-
-
 
 Kubernetes Deployment
 Step 6: Begin Kubernetes Deployment
 Start by disabling the swap memory on each server:
 
 sudo swapoff –a
-Step 7: Assign Unique Hostname for Each Server Node 
-Decide which server to set as the master node. Then enter the command:
-
-sudo hostnamectl set-hostname master-node
-Next, set a worker node hostname by entering the following on the worker server:
-
-sudo hostnamectl set-hostname worker01
-If you have additional worker nodes, use this process to set a unique hostname on each.
+Step 7:
+On each server, enable the use of iptables 
+echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
 
 Step 8: Initialize Kubernetes on Master Node
 Switch to the master server node, and enter the following:
@@ -173,4 +165,3 @@ Switch to the master server, and enter:
 
 kubectl get nodes
 The system should display the worker nodes that you joined to the cluster.
-
