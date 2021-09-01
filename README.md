@@ -55,38 +55,37 @@ Author : Sandip Das
 
 Steps to Install Kubernetes on Ubuntu
 Set up Docker
+
 Step 1: Install Docker
 Kubernetes requires an existing Docker installation. If you already have Docker installed, skip ahead to Step 2.
 
 If you do not have Kubernetes, install it by following these steps:
 
 1. Update the package list with the command:
-
 sudo apt-get update
 
-
 2. Next, install Docker with the command:
-
 sudo apt-get install docker.io
+
 3. Repeat the process on each server that will act as a node.
 
 4. Check the installation (and version) by entering the following:
-
 docker version
+
 Step 2: Start and Enable Docker
+
 1. Set Docker to launch at boot by entering the following:
-
 sudo systemctl enable docker
+
 2. Verify Docker is running:
-
 sudo systemctl status docker
-To start Docker if it’s not running:
 
+To start Docker if it’s not running:
 sudo systemctl start docker
+
 3. Repeat on all the other nodes.
 
-Install Kubernetes
-Step 3: Add Kubernetes Signing Key
+Step 3: Install Kubernetes
 Since you are downloading Kubernetes from a non-standard repository, it is essential to ensure that the software is authentic. This is done by adding a signing key.
 
 1. Enter the following to add a signing key:
@@ -122,8 +121,8 @@ Note: Make sure you install the same version of each package on each machine. Di
 Kubernetes Deployment
 Step 6: Begin Kubernetes Deployment
 Start by disabling the swap memory on each server:
-
 sudo swapoff –a
+
 Step 7:
 On each server, enable the use of iptables 
 echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
@@ -140,6 +139,7 @@ Next, enter the following to create a directory for the cluster:
 kubernetes-master:~$ mkdir -p $HOME/.kube
 kubernetes-master:~$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 kubernetes-master:~$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
 Step 9: Deploy Pod Network to Cluster
 A Pod Network is a way to allow communication between different nodes in the cluster. This tutorial uses the flannel virtual network.
 
@@ -149,8 +149,8 @@ sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Do
 Allow the process to complete.
 
 Verify that everything is running and communicating:
-
 kubectl get pods --all-namespaces
+
 Step 10: Join Worker Node to Cluster
 If it's AWS EC2 allow an inbound TCP port 6443 in the master node security group from worker security group or IP (For demo purpose quickly I just enable publicly but you should make sure it's secure)
 
